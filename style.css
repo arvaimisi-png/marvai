@@ -1,0 +1,522 @@
+/* ==========================================
+   STÍLUSOK & SZÍNPALETTA
+   ========================================== */
+:root {
+  --primary: #0F4C81;          /* Kék főszín */
+  --primary-hover: #0a3459;
+  --triadic-1: #810F4C;        /* Bíbor */
+  --triadic-2: #4C810F;        /* Zöld */
+
+  --bg-light: #F8FAFC;
+  --card-bg: #FFFFFF;
+  --text-main: #1A202C;
+  --text-muted: #4A5568;
+  --border-color: #E2E8F0;
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --transition: all 0.25s ease-in-out;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  min-height: 100vh;
+  font-family: 'Inter', -apple-system, sans-serif;
+  color: var(--text-main);
+  background-color: var(--bg-light);
+  line-height: 1.6;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ==========================================
+   NYELVVÁLTÁS REJTÉS/MEGJELENÍTÉS LOGIKA
+   ========================================== */
+html[data-lang="hu"] .lang-en {
+  display: none !important;
+}
+
+html[data-lang="en"] .lang-hu {
+  display: none !important;
+}
+
+/* ==========================================
+   NAVIGÁCIÓ & NYELVVÁLTÓ
+   ========================================== */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #FFFFFF;
+  border-bottom: 3px solid var(--primary);
+  z-index: 1000;
+  padding: 12px 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #f1f5f9;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: var(--transition);
+}
+
+.lang-btn.active {
+  color: #FFFFFF;
+  background-color: var(--primary);
+}
+
+.lang-divider {
+  color: #cbd5e1;
+  font-size: 0.8rem;
+}
+
+.nav-menu ul {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  color: var(--primary);
+  background-color: rgba(15, 76, 129, 0.05);
+}
+
+.nav-link.active {
+  color: #FFFFFF;
+  background-color: var(--primary);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  display: block;
+  width: 24px;
+  height: 3px;
+  margin: 4px 0;
+  background-color: var(--primary);
+}
+
+/* ==========================================
+   TAB / PAGE VISIBILITY
+   ========================================== */
+.main-content {
+  flex: 1;
+  padding: 40px 0;
+}
+
+.page-section {
+  display: none;
+}
+
+.page-section.active {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.section-title {
+  font-size: 2rem;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--text-muted);
+  margin-bottom: 35px;
+  font-size: 0.95rem;
+}
+
+/* ==========================================
+   HERO / HOME
+   ========================================== */
+.hero-container {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.subtitle {
+  color: var(--triadic-1);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-size: 0.85rem;
+}
+
+.hero-text h1 {
+  font-size: 2.6rem;
+  color: var(--primary);
+  margin: 8px 0;
+  line-height: 1.1;
+}
+
+.hero-text h2 {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.hero-text .description {
+  color: var(--text-muted);
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: var(--transition);
+}
+
+.btn-primary { background-color: var(--primary); color: #FFFFFF; }
+.btn-primary:hover { background-color: var(--primary-hover); }
+
+.btn-secondary { background-color: var(--triadic-1); color: #FFFFFF; }
+.btn-secondary:hover { background-color: #5d0a36; }
+
+.portrait-card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.portrait-img { width: 100%; display: block; }
+.portrait-badge {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: rgba(15, 76, 129, 0.9);
+  color: #FFFFFF;
+  padding: 8px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* ==========================================
+   CASE STUDIES DESIGN (image_e22a97.png ILLÉSKEDÉS)
+   ========================================== */
+.portfolio-list {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.cs-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: var(--shadow-sm);
+}
+
+.cs-title {
+  color: #0F4C81;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.cs-domains {
+  font-style: italic;
+  color: #4A5568;
+  font-size: 0.92rem;
+  margin-bottom: 18px;
+}
+
+.cs-domains strong {
+  font-style: normal;
+  color: #1A202C;
+}
+
+.cs-section-header {
+  font-weight: 700;
+  color: #1A202C;
+  font-size: 0.98rem;
+  margin-top: 14px;
+  margin-bottom: 6px;
+}
+
+.cs-section-header span {
+  font-weight: 700;
+  color: #0F4C81;
+}
+
+.cs-text {
+  color: #2D3748;
+  font-size: 0.93rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+/* RENDSZERARCHITEKTÚRA DOBOZ (Kép szerinti pontozott keret kék csíkkal) */
+.cs-architecture-box {
+  border: 1px dashed #A0AEC0;
+  border-left: 4px solid #0F4C81;
+  background-color: #FAFCFF;
+  padding: 16px 20px;
+  margin: 18px 0;
+  border-radius: 4px;
+}
+
+.cs-box-title {
+  color: #0F4C81;
+  font-weight: 700;
+  font-size: 1.02rem;
+  margin-bottom: 10px;
+}
+
+.cs-architecture-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.cs-architecture-box li {
+  margin-bottom: 8px;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: #2D3748;
+}
+
+.cs-architecture-box li strong {
+  color: #1A202C;
+}
+
+.cs-architecture-box li span {
+  font-style: italic;
+  color: #4A5568;
+}
+
+/* PROCESSDIAGRAM (Kép szerinti flow) */
+.cs-diagram {
+  background-color: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  padding: 12px;
+  margin: 14px 0;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 0.88rem;
+  color: #0F4C81;
+  text-align: center;
+  font-weight: 600;
+  overflow-x: auto;
+}
+
+/* EREDMÉNYEK DOBOZ (Kép szerinti szürke/kék háttér zöld pipákkal) */
+.cs-impact-box {
+  background-color: #EDF2F7;
+  border: 1px solid #CBD5E0;
+  padding: 18px 20px;
+  margin-top: 18px;
+  border-radius: 6px;
+}
+
+.cs-impact-box .cs-box-title {
+  color: #0F4C81;
+  margin-bottom: 10px;
+}
+
+.cs-impact-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.cs-impact-box li {
+  margin-bottom: 8px;
+  font-size: 0.92rem;
+  color: #2D3748;
+  font-style: italic;
+}
+
+.cs-impact-box li .cs-check {
+  color: #2E7D32;
+  font-weight: bold;
+  font-style: normal;
+  margin-right: 6px;
+}
+
+.cs-impact-box li strong {
+  color: #1B5E20;
+  font-style: normal;
+}
+
+/* ==========================================
+   CV SECTION
+   ========================================== */
+.cv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  background: #FFFFFF;
+  padding: 35px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.cv-column h3 {
+  color: var(--primary);
+  margin-bottom: 16px;
+  border-bottom: 2px solid var(--triadic-1);
+  padding-bottom: 6px;
+  font-size: 1.15rem;
+}
+
+.skills-list { list-style: none; }
+.skills-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.experience-highlight {
+  background-color: rgba(129, 15, 76, 0.04);
+  border-left: 4px solid var(--triadic-1);
+  padding: 15px;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+.experience-highlight h4 {
+  color: var(--triadic-1);
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+.experience-highlight ul {
+  padding-left: 18px;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+/* ==========================================
+   KAPCSOLATI ŰRLAP
+   ========================================== */
+.contact-wrapper {
+  max-width: 580px;
+  margin: 0 auto;
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+}
+
+.form-group { margin-bottom: 18px; }
+.form-group label { display: block; margin-bottom: 6px; font-weight: 600; font-size: 0.9rem; }
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+.btn-block { width: 100%; }
+
+/* LÁBLÉC */
+.footer {
+  background-color: var(--primary);
+  color: #FFFFFF;
+  text-align: center;
+  padding: 16px 0;
+  font-size: 0.85rem;
+  margin-top: auto;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .hero-container, .cv-grid { grid-template-columns: 1fr; }
+  .menu-toggle { display: block; }
+  .nav-menu {
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid var(--border-color);
+    padding: 15px;
+    display: none;
+  }
+  .nav-menu.active { display: block; }
+  .nav-menu ul { flex-direction: column; align-items: center; }
+}

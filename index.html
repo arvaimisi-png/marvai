@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="hu" data-lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Árvai Mihály | Irányítástechnikai & Automatizálási Mérnök</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVIGÁCIÓS FEJLÉC -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="brand-name" data-target="home">
+        <span class="lang-hu">Árvai Mihály</span>
+        <span class="lang-en">Mihály Árvai</span>
+      </a>
+
+      <div class="nav-right">
+        <!-- Nyelvváltó gombok -->
+        <div class="lang-switcher">
+          <button id="lang-hu" class="lang-btn active">HU</button>
+          <span class="lang-divider">|</span>
+          <button id="lang-en" class="lang-btn">EN</button>
+        </div>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Menü megnyitása">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul>
+          <li><a href="#" class="nav-link active" data-target="home"><span class="lang-hu">Főoldal</span><span class="lang-en">Home</span></a></li>
+          <li><a href="#" class="nav-link" data-target="portfolio"><span class="lang-hu">Referenciák</span><span class="lang-en">Portfolio</span></a></li>
+          <li><a href="#" class="nav-link" data-target="oneletrajz"><span class="lang-hu">Önéletrajz</span><span class="lang-en">Resume</span></a></li>
+          <li><a href="#" class="nav-link" data-target="kapcsolat"><span class="lang-hu">Kapcsolat</span><span class="lang-en">Contact</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- FŐ TARTALMI TERÜLET -->
+  <main class="main-content">
+
+    <!-- 1. HOME OLDAL -->
+    <section id="home" class="page-section active">
+      <div class="container hero-container">
+        <div class="hero-text">
+          <span class="subtitle">
+            <span class="lang-hu">Irányítástechnikai & Automatizálási Mérnök</span>
+            <span class="lang-en">Control Systems & Automation Engineer</span>
+          </span>
+          <h1>Árvai Mihály</h1>
+          <h2>
+            <span class="lang-hu">Komplex ipari célgépek, robotcellák és vezérlőrendszerek fejlesztése</span>
+            <span class="lang-en">Complex Industrial Automation, Motion Control & Robotics Engineering</span>
+          </h2>
+          <p class="description lang-hu">
+            Több mint fél évtizedes szakmai tapasztalattal rendelkezem egyedi ipari automatizálási projektek teljes életciklusának menedzselésében. Szakterületem a PLC/HMI szoftverfejlesztés (Siemens TIA Portal, Omron Sysmac Studio), a robotika (FANUC) és 2D vision rendszerek (Omron FH), valamint a nehézipari présvezérlések és biztonságtechnikai architektúrák tervezése.
+          </p>
+          <p class="description lang-en">
+            A showcase of 10 industrial automation projects structured as technical case studies. Demonstrates comprehensive ownership across PLC/HMI software development (Siemens TIA Portal, Omron Sysmac Studio), industrial robotics (FANUC), 2D vision (Omron FH), safety-integrated fieldbus (PROFIsafe), precision motion control, web tension control, and heavy hydraulics.
+          </p>
+          <div class="hero-buttons">
+            <button class="btn btn-primary nav-btn" data-target="portfolio">
+              <span class="lang-hu">Projektek Megtekintése</span>
+              <span class="lang-en">View Case Studies</span>
+            </button>
+            <button class="btn btn-secondary nav-btn" data-target="kapcsolat">
+              <span class="lang-hu">Kapcsolatfelvétel</span>
+              <span class="lang-en">Contact Me</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-image-wrapper">
+          <div class="portrait-card">
+            <img src="https://via.placeholder.com/400x480/0F4C81/FFFFFF?text=Árvai+Mihály" alt="Árvai Mihály" class="portrait-img">
+            <div class="portrait-badge">
+              <span>Control System Engineer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. RÉSZLETES PORTFÓLIÓ / CASE STUDIES -->
+    <section id="portfolio" class="page-section">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="lang-hu">Mérnöki Esettanulmányok & Referenciák</span>
+          <span class="lang-en">Engineering Case Studies</span>
+        </h2>
+        <p class="section-subtitle">
+          <span class="lang-hu">Részletes betekintés az egyedi ipari célgépek, robotcellák és hajtásvezérlések fejlesztésébe</span>
+          <span class="lang-en">Selected Case Studies: Machine Automation, Motion Control, Vision Integration & Safety Systems</span>
+        </p>
+
+        <div class="portfolio-list">
+
+          <!-- CASE STUDY #1 -->
+          <article class="cs-card">
+            <h3 class="cs-title">
+                <span class="lang-hu">Referencia #1: Szelepfurat pérs </span>
+                <span class="lang-en">CASE STUDY #1: RIM VALVE HOLE PRESS</span>
+            </h3>
+            <p class="cs-domains"><strong>
+                <span class="lang-hu">Kiemelt műszaki kompetenciák:</span>
+                <span class="lang-en">Core Technical Domains:</span>
+            </strong>hibabiztos biztonsági logika
+                <span class="lang-hu">Dinamikus, kamerás (gépi látás alapú) zárt hurkú robotpozicionálás, hidraulikus préselés, biztonsági PLC</span>
+                <span class="lang-en">Dynamic Robot-Vision Closed-Loop Alignment, Hydraulic Pressing, Fail-Safe Safety Logic</span>
+            </p>
+
+            <p class="cs-section-header">Context & Operational Problem:</p>
+            <p class="cs-text lang-hu">Nagy pontosságú autóipari gyártócellában szükséges volt a felnik szelepfuratainak automatikus beállítása és lukasztása. A betöltő konvejorról érkező felnik szögeltérése elérte a ±15°-ot.</p>
+            <p class="cs-text lang-en">High-precision automotive manufacturing cell required automated alignment and punching of valve holes on wheel rims fed from a loading conveyor with high angular orientation variance (up to ±15°).</p>
+
+            <div class="cs-architecture-box">
+              <div class="cs-box-title">System Architecture & Scope of Ownership</div>
+              <ul>
+                <li>• <strong>Hardware Topology:</strong> <span>2x FANUC R-2000iB/165F Industrial Robots | Omron FH Vision System | Siemens G120 VFD Hydraulic Power Units</span></li>
+                <li>• <strong>Software / Controllers:</strong> <span>Siemens Fail-Safe PLC & HMI programmed via TIA Portal | FANUC KAREL/TP Motion Logic | PROFINET Fieldbus</span></li>
+                <li>• <strong>Personal Engineering Role:</strong> <span>Lead Controls Engineer — Owned complete fail-safe PLC/HMI software, FANUC robot motion logic, vision system integration, and hydraulic VFD control parameters.</span></li>
+              </ul>
+            </div>
+
+            <p class="cs-section-header">Key Technical Challenge & Engineering Solution: <span>Closed-Loop Vision-to-Robot Alignment without Mechanical Fixtures</span></p>
+            <p class="cs-text lang-hu">A beérkező felnik akár ±15°-os szögeltérést mutattak. A drága mechanikus központosító egységek elkerülése és a cella alapterületének csökkentése érdekében dinamikus robot-vision zárt hurkú igazítási algoritmust fejlesztettem ki:</p>
+            <p class="cs-text lang-en">Incoming rims introduced up to ±15° of angular misalignment on the conveyor. To avoid expensive mechanical re-centering mechanisms and reduce cell footprint, a dynamic vision-to-robot closed-loop alignment algorithm was engineered:</p>
+
+            <div class="cs-diagram">
+              [Camera Image Capture] &nbsp;--->&nbsp; [PLC Offset Vector Calculation] &nbsp;--->&nbsp; [Dynamic TCP Shift] &nbsp;--->&nbsp; [Robot Realignment]
+            </div>
+
+            <p class="cs-text lang-hu">A robot a felnit egy fix referencia-ponthoz viszi az Omron FH kamera elé. A PLC kiszámítja a szögeltérést, menet közben frissíti a robot TCP-jét (Tool Center Point), majd behelyezi a felnit a présbe.</p>
+            <p class="cs-text lang-en">The robot presents the rim to the Omron FH camera at a fixed reference point. The PLC calculates the angular error offset from the vision data, updates the robot's Tool Center Point (TCP) on the fly, and re-verifies position before inserting the rim into the press tool.</p>
+
+            <div class="cs-impact-box">
+              <div class="cs-box-title">Quantified Engineering Outcomes & Impact</div>
+              <ul>
+                <li><span class="cs-check">✔</span> <strong>Eliminated Mechanical Fixtures:</strong> Saved ~20% cell footprint and removed high-wear mechanical centering hardware.</li>
+                <li><span class="cs-check">✔</span> <strong>Zero Scrap Rate:</strong> Fail-Safe software validation prevented off-center punching, achieving a 0% scrap rate due to mis-stamping.</li>
+                <li><span class="cs-check">✔</span> <strong>Sub-1.5s Alignment Cycle:</strong> Executed image processing and dynamic TCP shift well within the cell's target takt time.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- CASE STUDY #2 -->
+          <article class="cs-card">
+            <h3 class="cs-title">CASE STUDY #2: RETROFIT ECCENTRIC STAMPING PRESS</h3>
+            <p class="cs-domains"><strong>Core Technical Domains:</strong> High-Speed Motion Dynamics, Servo Positioning, Crankshaft Phase Synchronization</p>
+
+            <p class="cs-section-header">Context & Operational Problem:</p>
+            <p class="cs-text lang-hu">Elektromos motorok rotor és stator lemezeinek stancolására szolgáló Schuler excenter prés modernizálása. A korábbi mechanikus rendszernél minden termékváltásnál manuális fogaskerék-cserére volt szükség.</p>
+            <p class="cs-text lang-en">Modernization of an industrial Schuler eccentric press used to punch rotor and stator lamination slots for electric motors. The legacy machine required manual mechanical gear replacements for every product changeover.</p>
+
+            <div class="cs-architecture-box">
+              <div class="cs-box-title">System Architecture & Scope of Ownership</div>
+              <ul>
+                <li>• <strong>Hardware Topology:</strong> <span>High-Speed Siemens S210 Servo Positioning Drive & Motor | Siemens G120 VFD Flywheel Drive | Rotary Encoder</span></li>
+                <li>• <strong>Software / Controllers:</strong> <span>Siemens Fail-Safe PLC & HMI (TIA Portal) | Servo Technology Objects | High-Speed Proximity Trigger Interlocks</span></li>
+                <li>• <strong>Personal Engineering Role:</strong> <span>Lead Software & Motion Engineer — Programmed PLC, Safety, and HMI applications; parameterized and fine-tuned servo dynamic profiles and position triggers.</span></li>
+              </ul>
+            </div>
+
+            <p class="cs-section-header">Key Technical Challenge & Engineering Solution: <span>Time-Critical Motion Control at 5 Strokes / Second (200 ms Total Cycle Window)</span></p>
+            <p class="cs-text lang-hu">Másodpercenkénti 5 stancolási ciklusnál mindössze 50–70 ms állt rendelkezésre a munkadarab következő pozícióba léptetésére. Ezt a szervó gyorsulási/lassulási S-görbéinek optimális beállításával és a főtengely jeladó szinkronizációjával értem el.</p>
+            <p class="cs-text lang-en">With the press cycling continuously at 5 punches per second, the servo positioner had a window of only ~50–70 ms between strokes to index the workpiece to the next slot count. Achieved lock-in without mechanical bounce or collision by optimizing servo acceleration/jerk S-curves and synchronizing motion triggers directly with crankshaft encoder position.</p>
+
+            <div class="cs-impact-box">
+              <div class="cs-box-title">Quantified Engineering Outcomes & Impact</div>
+              <ul>
+                <li><span class="cs-check">✔</span> <strong>95% Setup Time Reduction:</strong> Cut product changeover from 45+ minutes (manual gear swap) to under 2 minutes (HMI recipe select).</li>
+                <li><span class="cs-check">✔</span> <strong>Maintained Throughput:</strong> Achieved full production speed without mechanical collision or loss of positioning accuracy.</li>
+                <li><span class="cs-check">✔</span> <strong>Flexible Production:</strong> Enabled arbitrary slot count programming directly from the HMI screen.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- CASE STUDY #3 -->
+          <article class="cs-card">
+            <h3 class="cs-title">CASE STUDY #3: 20,000-METRIC-TON HEAVY HYDRAULIC PRESS OVERHAUL</h3>
+            <p class="cs-domains"><strong>Core Technical Domains:</strong> Heavy Hydraulic Safety, High-Mass Motion Control, Emergency Recovery Systems</p>
+
+            <p class="cs-section-header">Context & Operational Problem:</p>
+            <p class="cs-text lang-hu">Egy 3 emelet magas, 20 000 tonnás hidraulikus prés elektromos és hidraulikus vezérlésének komplett újjáépítése egy súlyos hidraulikus meghibásodást követően, ahol a felső szerszám váratlanul lezuhant.</p>
+            <p class="cs-text lang-en">Complete electrical and hydraulic control restoration of a 3-story, 20,000-metric-ton press following a catastrophic hydraulic failure where the top upper mold dropped unexpectedly.</p>
+
+            <div class="cs-architecture-box">
+              <div class="cs-box-title">System Architecture & Scope of Ownership</div>
+              <ul>
+                <li>• <strong>Hardware Topology:</strong> <span>3-Story Hydraulic Press Structure | High-Pressure Proportional Valve Blocks | Dual Redundant Linear Encoders | Hydraulic Pressure Feedback Transducers</span></li>
+                <li>• <strong>Software / Controllers:</strong> <span>Omron Sysmac Studio PLC & HMI | Custom Safety State Machine | Proportional Hydraulic Pressure Ramping</span></li>
+                <li>• <strong>Personal Engineering Role:</strong> <span>Controls Engineer — Re-architected and rewrote the complete PLC/HMI software codebase, proportional valve controls, and safety execution sequences.</span></li>
+              </ul>
+            </div>
+
+            <p class="cs-section-header">Key Technical Challenge & Engineering Solution: <span>Safety-Critical Overhaul and Free-Fall Prevention on Extreme-Mass Machinery</span></p>
+            <p class="cs-text lang-hu">Rendkívül nagy tömegű szerkezet biztonságos mozgatása. Fejlett redundáns szelep-ellenőrzési rutinokat, proporcionális nyomásfelfutási profilokat és fizikai reteszelő csapokat terveztem a szabadon esés teljes elkerülésére.</p>
+            <p class="cs-text lang-en">Managing severe safety risks and heavy structural mass dynamics. Designed fail-safe redundant valve monitoring routines, smooth proportional pressure-ramp profiles, and physical locking pin interlocks to guarantee the multi-ton upper mold could never free-fall during power loss or pressure drop.</p>
+
+            <div class="cs-impact-box">
+              <div class="cs-box-title">Quantified Engineering Outcomes & Impact</div>
+              <ul>
+                <li><span class="cs-check">✔</span> <strong>100% Operational & Safety Restoration:</strong> Re-commissioned a critical manufacturing asset with zero safety compromise.</li>
+                <li><span class="cs-check">✔</span> <strong>Eliminated Pressure Spikes:</strong> Proportional valve ramping eliminated structural shock pressure spikes, extending seal and valve life.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- CASE STUDY #4 -->
+          <article class="cs-card">
+            <h3 class="cs-title">CASE STUDY #4: RIM MOUNTING HOLE PRESS</h3>
+            <p class="cs-domains"><strong>Core Technical Domains:</strong> Precision Servo/Hydraulic Control, Quality Capabilities (Cpk Optimization), Vision Quality Gate</p>
+
+            <p class="cs-section-header">Context & Operational Problem:</p>
+            <p class="cs-text lang-hu">Automata hidraulikus prés Cella, amely a kerékpánt rögzítőfuratait préseli pontos 0.5–5% kompressziós toleranciával, egyidejűleg ellenőrizve a préselési nyomvonal geometriáját.</p>
+            <p class="cs-text lang-en">Automated hydraulic press cell designed to compress wheel rim mounting holes by a precise 0.5–5% compression tolerance while inspecting press mark geometry.</p>
+
+            <div class="cs-architecture-box">
+              <div class="cs-box-title">System Architecture & Scope of Ownership</div>
+              <ul>
+                <li>• <strong>Hardware Topology:</strong> <span>2x 120-Ton Hydraulic Presses with Servo Rotary Chucks | FANUC R-2000iB/165F Robot | Omron FH Vision System | Siemens V90 Servo Drives</span></li>
+                <li>• <strong>Software / Controllers:</strong> <span>Siemens Fail-Safe PLC & HMI (TIA Portal) | Omron FH Vision Inspection Software | Closed-Loop Force/Displacement Control</span></li>
+                <li>• <strong>Personal Engineering Role:</strong> <span>Controls Engineer — Programmed Siemens PLC/HMI in TIA Portal, setup V90 servo drive dynamics, and co-developed Omron FH vision inspection logic.</span></li>
+              </ul>
+            </div>
+
+            <p class="cs-section-header">Key Technical Challenge & Engineering Solution: <span>Closed-Loop Force & Displacement Control to Achieve Cpk >= 1.67</span></p>
+            <p class="cs-text lang-hu">Szigorú autóipari minőségi elvárások teljesítése változó keménységű alapanyagok mellett. Zárt hurkú erő- és elmozdulás-szabályozást valósítottam meg a kívánt Cpk érték eléréséhez.</p>
+            <p class="cs-text lang-en">Achieving tight automotive quality metrics across variable material hardness grades. Combined high-resolution servo rotary chuck feedback with dynamic proportional valve profiling to halt pressing at exact compression percentages (0.5–5%) across varying metal hardness levels.</p>
+
+            <div class="cs-impact-box">
+              <div class="cs-box-title">Quantified Engineering Outcomes & Impact</div>
+              <ul>
+                <li><span class="cs-check">✔</span> <strong>High Process Capability:</strong> Consistently achieved process capability metrics of Cpk >= 1.67 across high-volume production.</li>
+                <li><span class="cs-check">✔</span> <strong>Automated Quality Gate:</strong> Integrated inline vision inspection, eliminating downstream manual quality checks.</li>
+                <li><span class="cs-check">✔</span> <strong>Reduced Scrap:</strong> Dynamic depth compensation reduced out-of-spec mounting hole compression to zero.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- CASE STUDY #5 -->
+          <article class="cs-card">
+            <h3 class="cs-title">CASE STUDY #5: FORGING PRESS FLASH CUTTER</h3>
+            <p class="cs-domains"><strong>Core Technical Domains:</strong> Cross-Platform PROFIsafe Safety Integration, Inter-PLC Communication, Heavy Forging Automation</p>
+
+            <p class="cs-section-header">Context & Operational Problem:</p>
+            <p class="cs-text lang-hu">Izzó melegkovácsolt darabok sorjázása és selejtkezelése nehézipari kovácsprés cellában, kettős cserélhető gyűjtőkonténeres rendszerrel.</p>
+            <p class="cs-text lang-en">Automated trimming and handling of red-hot forging flash within a heavy forging press cell using dual swap-out collection containers.</p>
+
+            <div class="cs-architecture-box">
+              <div class="cs-box-title">System Architecture & Scope of Ownership</div>
+              <ul>
+                <li>• <strong>Hardware Topology:</strong> <span>Hydraulic Flash Cutting Shear | Omron MX2 VFD | Dual Swap-Out Container System | Forging Robot</span></li>
+                <li>• <strong>Software / Controllers:</strong> <span>Master Controller: Siemens S7-300 (SIMATIC Manager) | Sub-System: Siemens S7-1200 (TIA Portal) | PROFIsafe over PROFINET</span></li>
+                <li>• <strong>Personal Engineering Role:</strong> <span>Electrical & Controls Systems Engineer — Designed electrical schematics in WSCAD, sourced hardware, programmed S7-1200 PLC/HMI/Safety, and established cross-platform safety signals.</span></li>
+              </ul>
+            </div>
+
+            <p class="cs-section-header">Key Technical Challenge & Engineering Solution: <span>Cross-Platform PROFIsafe Safety Coupling Between S7-300 and S7-1200</span></p>
+            <p class="cs-text lang-hu">Biztonsági kapcsolat létesítése a meglévő S7-300 (SIMATIC Manager) és az új S7-1200 (TIA Portal) vezérlő között determinisztikus PROFIsafe over PROFINET kommunikációval.</p>
+            <p class="cs-text lang-en">Bridging safety controls between a master S7-300 (programmed in legacy SIMATIC Manager by a third party) and a new S7-1200 (programmed in TIA Portal). Configured deterministic PROFIsafe over PROFINET coupling to seamlessly share emergency stops, safety gates, and cell state machines across both software platforms.</p>
+
+            <div class="cs-impact-box">
+              <div class="cs-box-title">Quantified Engineering Outcomes & Impact</div>
+              <ul>
+                <li><span class="cs-check">✔</span> <strong>Continuous Forging Operation:</strong> Enabled dual-container swapping without stopping the main forging press.</li>
+                <li><span class="cs-check">✔</span> <strong>Complete Safety Isolation:</strong> Removed operator exposure to red-hot metal waste in the hazardous flash-trimming zone.</li>
+                <li><span class="cs-check">✔</span> <strong>Seamless Integration:</strong> Delivered flawless inter-PLC safety signals across two distinct Siemens software environments.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- CASE STUDY #6 -->
+          <article class="cs-card">
+            <h3 class="cs-title">CASE STUDY #6: SYNTHETIC FLOORING RESPOOLING ADJUSTER</h3>
+            <p class="cs-domains"><strong>Core Technical Domains:</strong> Dynamic Web Tension Control, Variable Diameter PID Optimization, Multi-VFD Synchronization</p>
+
+            <p class="cs-section-header">Context & Operational Problem:</p>
+            <p class="cs-text lang-hu">Nagykapacitású áttekercselő gép, amely 4 méter széles műanyag padlóburkolatot tekercsel át nagy master tekercsekről (500–800 m) kereskedelmi kiszerelésre (15–30 m).</p>
+            <p class="cs-text lang-en">High-capacity rewinding machine designed to spool 4-meter-wide synthetic flooring from master rolls (500–800 m) down to commercial packaging rolls (15–30 m).</p>
+
+            <div class="cs-architecture-box">
+              <div class="cs-box-title">System Architecture & Scope of Ownership</div>
+              <ul>
+                <li>• <strong>Hardware Topology:</strong> <span>Master Cart Shaft Drive VFD | Core Shaft Drive VFD | Rubber-Coated Tension Drive VFD | Encoder Feedback</span></li>
+                <li>• <strong>Software / Controllers:</strong> <span>Siemens Fail-Safe PLC & HMI (TIA Portal) | Closed-Loop PID Control Loops | Real-Time Inertia & Diameter Calculations</span></li>
+                <li>• <strong>Personal Engineering Role:</strong> <span>Controls Programmer — Developed complete PLC/HMI application, parameterized drive groups, and tuned closed-loop tension control loops.</span></li>
+              </ul>
+            </div>
+
+            <p class="cs-section-header">Key Technical Challenge & Engineering Solution: <span>Dynamic Tension Compensation Across a 1:20 Roll Diameter Change</span></p>
+            <p class="cs-text lang-hu">Egyenletes anyagfeszítés biztosítása 1:20 átmérőváltozás mellett, ráncolódás és nyúlás nélkül. Real-time átmérő- és tehetetlenség-becslő PID algoritmusokat implementáltam a PLC-ben.</p>
+            <p class="cs-text lang-en">Maintaining uniform web tension across a 1:20 roll diameter variation without stretching or wrinkling the material. Built active PID control loops with real-time diameter and inertia estimation inside the PLC to continuously adjust drive motor torque and speeds.</p>
+
+            <div class="cs-impact-box">
+              <div class="cs-box-title">Quantified Engineering Outcomes & Impact</div>
+              <ul>
+                <li><span class="cs-check">✔</span> <strong>Zero Material Distortion:</strong> Completely eliminated surface stretching, wrinkling, or material deformation during spooling.</li>
+                <li><span class="cs-check">✔</span> <strong>High Precision Cut Lengths:</strong> Delivered exact consumer roll lengths within a tight ±0.2% tolerance window.</li>
+                <li><span class="cs-check">✔</span> <strong>Smooth Dynamic Acceleration:</strong> Programmed inertia-compensated ramping curves to prevent web breakage on start/stop.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- CASE STUDY #7 -->
+          <article class="cs-card">
+            <h3 class="cs-title">CASE STUDY #7: 4-CHAMBER RUBBER VULCANIZING LINE</h3>
+            <p class="cs-domains"><strong>Core Technical Domains:</strong> Multi-Axis Sequence Synchronization, Multi-Chamber Process Control, Dynamic Recipe Management</p>
+
+            <p class="cs-section-header">Context & Operational Problem:</p>
+            <p class="cs-text lang-hu">Automata hőtükrös vulkanizáló berendezés autóipari légrugó-gumicsövek gyártásához, automata betöltéssel, többállomásos léptetéssel és gőzvulkanizálással.</p>
+            <p class="cs-text lang-en">Automated thermal processing system for automotive seat air-spring rubber tubes requiring automated loading, multi-station index swapping, and steam vulcanization.</p>
+
+            <div class="cs-architecture-box">
+              <div class="cs-box-title">System Architecture & Scope of Ownership</div>
+              <ul>
+                <li>• <strong>Hardware Topology:</strong> <span>Overhead 8-Gripper Chain Drive System | VFD Rotating Indexing Table | Pneumatic Chamber Lids | Steam/Water Proportional Valve Arrays</span></li>
+                <li>• <strong>Software / Controllers:</strong> <span>Siemens Fail-Safe PLC & HMI (TIA Portal) | Siemens G120 VFD Parameters | Multi-Recipe Thermal/Pressure Management</span></li>
+                <li>• <strong>Personal Engineering Role:</strong> <span>Lead Software Engineer — Developed PLC, HMI, and Safety software, parameterized Siemens G120 VFDs, and implemented multi-recipe processing loops.</span></li>
+              </ul>
+            </div>
+
+            <p class="cs-section-header">Key Technical Challenge & Engineering Solution: <span>Multi-Axis Motion & Process Sequence Synchronization Across 4 Chambers</span></p>
+
+            <p class="cs-text lang-hu">Láncos átemelő, 180°-os forgóasztal, felső pneumatikus megfogók és nyomás/gőz ciklusok komplex szinkronizálása 4 független vulkanizáló kamra között.</p>
+            <p class="cs-text lang-en">Synchronizing a VFD-driven chain lift mechanism, a 180° rotating transfer plate, overhead pneumatic grippers, and pressure/steam cycle profiles across 4 independent vulcanization chambers.</p>
+
+            <div class="cs-impact-box">
+              <div class="cs-box-title">Quantified Engineering Outcomes & Impact</div>
+              <ul>
+                <li><span class="cs-check">✔</span> <strong>35% Throughput Increase:</strong> Automated transfer reduced cycle delay between loading raw mandrels and unloading cured parts.</li>
+                <li><span class="cs-check">✔</span> <strong>Consistent Curing Quality:</strong> Closed-loop recipe management ensured uniform vulcanization per product specification.</li>
+                <li><span class="cs-check">✔</span> <strong>Fully Automated Thermal Cycle:</strong> Eliminated manual chamber loading and steam timing errors.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- CASE STUDY #8 -->
+          <article class="cs-card">
+            <h3 class="cs-title">CASE STUDY #8: AIRBAG ELECTRICAL CONNECTOR TESTER UPGRADE</h3>
+            <p class="cs-domains"><strong>Core Technical Domains:</strong> Fast-Track Shutdown Commissioning, Software Refactoring, Rotary Actuation</p>
+
+            <p class="cs-section-header">Context & Operational Problem:</p>
+            <p class="cs-text lang-hu">Gyorsleállás alatti állomásbővítés (7-ről 8 állomásra) és szoftveres újjáépítés egy autóipari légzsákcsatlakozó tesztelő körasztalos gépen, melynek korábbi kódja instabil volt.</p>
+            <p class="cs-text lang-en">Fast-track overhaul and station expansion (7 to 8 stations) of an indexing automotive connector testing machine whose legacy control software was unstable.</p>
+
+            <div class="cs-architecture-box">
+              <div class="cs-box-title">System Architecture & Scope of Ownership</div>
+              <ul>
+                <li>• <strong>Hardware Topology:</strong> <span>VFD-Driven Rotary Indexing Actuator | 8x Automated Continuity & Mechanical Testing Stations | Safety Light Curtains</span></li>
+                <li>• <strong>Software / Controllers:</strong> <span>Siemens Fail-Safe PLC & HMI (TIA Portal) | Complete Software Architecture Rewrite | Modular Function Block Structure</span></li>
+                <li>• <strong>Personal Engineering Role:</strong> <span>Software Lead & On-Site Commissioning Engineer — Completely rewrote the PLC and HMI software applications; led electrical and control commissioning.</span></li>
+              </ul>
+            </div>
+
+            <p class="cs-section-header">Key Technical Challenge & Engineering Solution: <span>Complete Software Overhaul with Only 2.5 Days for On-Site Commissioning</span></p>
+            <p class="cs-text lang-hu">Teljes átalakítás mindössze 10 napos gyári leállási ablakban, melyből csupán 2.5 nap állt rendelkezésre a helyszíni szoftveres üzembe helyezésre. Moduláris PLC architektúrával biztosítottam a gyors élesítést.</p>
+            <p class="cs-text lang-en">The complete overhaul (mechanical modification, electrical rewiring, and software rewrite) had to fit within a strict 10-day plant shutdown, leaving only 2.5 days for control software commissioning. Structured modular PLC code offline prior to site deployment to accelerate validation.</p>
+
+            <div class="cs-impact-box">
+              <div class="cs-box-title">Quantified Engineering Outcomes & Impact</div>
+              <ul>
+                <li><span class="cs-check">✔</span> <strong>On-Time Delivery:</strong> Successfully completed full site validation and hand-off within the 2.5-day window.</li>
+                <li><span class="cs-check">✔</span> <strong>100% Software Reliability:</strong> Replaced crashed legacy codebase with clean, modular code, eliminating software downtime.</li>
+                <li><span class="cs-check">✔</span> <strong>Expanded Production Capacity:</strong> Added the 8th inspection station, increasing overall machine throughput.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- CASE STUDY #9 -->
+          <article class="cs-card">
+            <h3 class="cs-title">CASE STUDY #9: TRAIN AIR SPRING VULCANIZING PRESS (BUILD-TO-PRINT)</h3>
+            <p class="cs-domains"><strong>Core Technical Domains:</strong> Turnkey Project Management, Foreign Electrical Standards, Component Procurement & BOM Adaptation</p>
+
+            <p class="cs-section-header">Context & Operational Problem:</p>
+            <p class="cs-text lang-hu">Kulcsrakész gyártási projekt 5 db vasúti légrugó-vulkanizáló prés megépítésére OEM partner számára, kapacitáshiány miatti kiszervezésben.</p>
+            <p class="cs-text lang-en">Turnkey build-to-print manufacturing of 5 hydraulic vulcanizing presses for train air springs on behalf of an OEM client facing internal capacity shortages.</p>
+
+            <div class="cs-architecture-box">
+              <div class="cs-box-title">System Architecture & Scope of Ownership</div>
+              <ul>
+                <li>• <strong>Hardware Topology:</strong> <span>Hydraulic Vulcanizing Presses | Custom Control Panels | Safety Relays & Sensor Networks</span></li>
+                <li>• <strong>Software / Controllers:</strong> <span>Client Schematics & BOM | Standard Engineering Documentation | Acceptance Test Protocols</span></li>
+                <li>• <strong>Personal Engineering Role:</strong> <span>Electrical Project Manager — Evaluated/corrected foreign-standard schematics, managed component procurement, led electrical installation teams, and coordinated client acceptance testing.</span></li>
+              </ul>
+            </div>
+
+            <p class="cs-section-header">Key Technical Challenge & Engineering Solution: <span>Adapting Foreign Engineering Standards and Expanding Incomplete BOMs</span></p>
+            <p class="cs-text lang-hu">Külföldi szabványok szerinti rajzok felülvizsgálata, hiányos alkatrészlisták (BOM) kiegészítése és gyors beszerzés biztosítása gyártási csúszás nélkül.</p>
+            <p class="cs-text lang-en">Reviewing electrical plans built to foreign engineering standards, identifying omissions, and expanding the Bill of Materials (BOM) for custom machine manufacturing without delaying assembly schedules.</p>
+
+            <div class="cs-impact-box">
+              <div class="cs-box-title">Quantified Engineering Outcomes & Impact</div>
+              <ul>
+                <li><span class="cs-check">✔</span> <strong>Delivered On Schedule & Budget:</strong> Built and delivered all 5 presses on time and within financial targets.</li>
+                <li><span class="cs-check">✔</span> <strong>First-Pass Acceptance:</strong> Passed Site Acceptance Testing (SAT) on first evaluation at the customer's manufacturing plant.</li>
+                <li><span class="cs-check">✔</span> <strong>Zero Assembly Delays:</strong> Proactive BOM corrections prevented procurement bottlenecks during panel builds.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- CASE STUDY #10 -->
+          <article class="cs-card">
+            <h3 class="cs-title">CASE STUDY #10: HARPOON CONVEYOR SWARF MANAGEMENT SYSTEM</h3>
+            <p class="cs-domains"><strong>Core Technical Domains:</strong> Distributed Inter-PLC Safety Interlocking, Energy-Optimized Hydraulics, WSCAD Schematic Design</p>
+
+            <p class="cs-section-header">Context & Operational Problem:</p>
+            <p class="cs-text lang-hu">Automata fémforgács-elszállító rendszer megmunkáló csarnokban, két mellék-szigonyos konvejorral és egy fő elszállító vonallal, forgácsdarálóval.</p>
+            <p class="cs-text lang-en">Automated metal chip (swarf) evacuation system in a machining hall, consisting of two sub-harpoon conveyors feeding a main harpoon discharge line and chip shredder.</p>
+
+            <div class="cs-architecture-box">
+              <div class="cs-box-title">System Architecture & Scope of Ownership</div>
+              <ul>
+                <li>• <strong>Hardware Topology:</strong> <span>Reciprocating Hydraulic Pistons | Siemens V20 VFD Hydraulic Pump Drives | Main & Sub Harpoon Mechanics</span></li>
+                <li>• <strong>Software / Controllers:</strong> <span>Distributed Siemens PLCs (TIA Portal) over PROFINET | WSCAD Electrical Schematics | Idling Pump Speed Logic</span></li>
+                <li>• <strong>Personal Engineering Role:</strong> <span>Electrical & Controls Designer — Designed electrical schematics in WSCAD, managed hardware sourcing, programmed PLC/HMI/Safety software, and tuned VFD profiles.</span></li>
+              </ul>
+            </div>
+
+            <p class="cs-section-header">Key Technical Challenge & Engineering Solution: <span>Energy Optimization and Inter-PLC Safety Interlocking</span></p>
+
+            <p class="cs-text lang-hu">A hidraulikaolaj túlmelegedésének megakadályozása és PLC-k közötti biztonsági reteszelések kiépítése. A szivattyúk fordulatszámának csökkentése az irányváltások alatt ~30% energiamegtakarítást eredményezett.</p>
+            <p class="cs-text lang-en">Preventing hydraulic fluid overheating and managing inter-PLC safety interlocking. Configured pump VFDs to automatically reduce speed during piston direction reversals, and implemented PROFINET interlocks ensuring sub-conveyors operate strictly when the main conveyor is running.</p>
+
+            <div class="cs-impact-box">
+              <div class="cs-box-title">Quantified Engineering Outcomes & Impact</div>
+              <ul>
+                <li><span class="cs-check">✔</span> <strong>~30% Hydraulic Energy Savings:</strong> Idling pump motor speeds during direction shifts significantly reduced oil thermal wear and power.</li>
+                <li><span class="cs-check">✔</span> <strong>Zero Chip Jams:</strong> Safety interlocking eliminated chip overflows across the machining hall floor.</li>
+                <li><span class="cs-check">✔</span> <strong>Complete Hardware Documentation:</strong> Produced comprehensive WSCAD schematics for plant maintenance teams.</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. ÖNÉLETRAJZ OLDAL -->
+    <section id="oneletrajz" class="page-section">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="lang-hu">Önéletrajz & Szakmai Kompetenciák</span>
+          <span class="lang-en">Resume & Core Competencies</span>
+        </h2>
+
+        <div class="cv-grid">
+          <div class="cv-column">
+            <h3>
+              <span class="lang-hu">Műszaki Eszköztár & Hardver</span>
+              <span class="lang-en">Technical Toolkit & Hardware</span>
+            </h3>
+            <ul class="skills-list">
+              <li><strong>PLC Controllers:</strong> Siemens S7-1200 / S7-1500 / S7-1500F / S7-300, Omron NJ/NX, Omron CJ series</li>
+              <li><strong>Software Tools:</strong> Siemens TIA Portal (STEP7, WinCC), Omron Sysmac Studio, CX-One</li>
+              <li><strong>Robotics & Vision:</strong> FANUC TP & KAREL programming, Omron FH 2D Vision Systems</li>
+              <li><strong>Drive Technology:</strong> Siemens V90, G120, Omron VFDs, Servo Tuning & PID Control</li>
+              <li><strong>Industrial Networks:</strong> PROFINET, PROFIsafe, Ethernet/IP, Modbus TCP</li>
+              <li><strong>Electrical Design:</strong> WSCAD Schematics, Hydraulic & Pneumatic Diagrams</li>
+            </ul>
+          </div>
+
+          <div class="cv-column">
+            <h3>
+              <span class="lang-hu">Mérnöki Szemlélet & Karrier</span>
+              <span class="lang-en">Engineering Approach</span>
+            </h3>
+            <p class="lang-hu">
+              A teljes projektéletciklust lefedő mérnöki munkavégzés: villamos kapcsolási rajzok tervezésétől a PLC/HMI/Robot kódoláson át a helyszíni üzembe helyezésig és minőségbiztosításig (Cpk igazolás).
+            </p>
+            <p class="lang-en">
+              Demonstrates comprehensive ownership across PLC/HMI software development, robotics, vision integration, safety systems, precision motion control, and heavy industrial automation.
+            </p>
+            <div class="experience-highlight">
+              <h4>
+                <span class="lang-hu">Főbb tapasztalati területek:</span>
+                <span class="lang-en">Core Focus Areas:</span>
+              </h4>
+              <ul>
+                <li><span class="lang-hu">Egyedi célgépek és robotcellák szoftveres integrációja</span><span class="lang-en">Custom Machine Automation & Robotic Cell Integration</span></li>
+                <li><span class="lang-hu">Nehézipari prések automatizálása és biztonságtechnikai auditja</span><span class="lang-en">Heavy Industrial Press Overhauls & Safety Systems</span></li>
+                <li><span class="lang-hu">Gyártósori ciklusidő-optimalizálás és hibadiagnosztika</span><span class="lang-en">Cycle Time Optimization & Motion Tuning</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. KAPCSOLAT OLDAL -->
+    <section id="kapcsolat" class="page-section">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="lang-hu">Kapcsolat</span>
+          <span class="lang-en">Contact</span>
+        </h2>
+        <p class="section-subtitle">
+          <span class="lang-hu">Vedd fel velem a kapcsolatot az alábbi űrlapon keresztül!</span>
+          <span class="lang-en">Get in touch with me using the form below!</span>
+        </p>
+
+        <div class="contact-wrapper">
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="name"><span class="lang-hu">Név</span><span class="lang-en">Name</span></label>
+              <input type="text" id="name" required placeholder="Név / Name">
+            </div>
+            <div class="form-group">
+              <label for="email"><span class="lang-hu">E-mail cím</span><span class="lang-en">Email Address</span></label>
+              <input type="email" id="email" required placeholder="email@domain.com">
+            </div>
+            <div class="form-group">
+              <label for="message"><span class="lang-hu">Üzenet</span><span class="lang-en">Message</span></label>
+              <textarea id="message" rows="5" required placeholder="Üzenet... / Message..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">
+              <span class="lang-hu">Üzenet Elküldése</span>
+              <span class="lang-en">Send Message</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Árvai Mihály. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
