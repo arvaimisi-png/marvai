@@ -43,6 +43,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Referenciák almenü (Tab-ok) kezelése
+    const tabButtons = document.querySelectorAll('.ref-tab-btn');
+    const tabContents = document.querySelectorAll('.ref-tab-content');
+
+    tabButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const targetTab = button.getAttribute('data-tab');
+
+        // Gombok aktív állapotának frissítése
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        // Tartalmak megjelenítése/elrejtése
+        tabContents.forEach(content => {
+          if (content.id === targetTab) {
+            content.classList.add('active');
+          } else {
+            content.classList.remove('active');
+          }
+        });
+      });
+    });
+
   // 2. NYELVVÁLTÓ (HU / EN)
   const langHuBtn = document.getElementById('lang-hu');
   const langEnBtn = document.getElementById('lang-en');
@@ -71,51 +94,17 @@ document.addEventListener('DOMContentLoaded', () => {
   setLanguage(savedLang);
 
   // 3. KAPCSOLATI ŰRLAP KEZELÉSE
-  
-const form = document.getElementById("form");
-const result = document.getElementById("result");
-
-form.addEventListener("submit", function (e) {
-  const formData = new FormData(form);
-  e.preventDefault();
-  var object = {};
-  formData.forEach((value, key) => {
-    object[key] = value;
-  });
-  var json = JSON.stringify(object);
-  result.innerHTML = "Please wait...";
-
-  fetch("https://api.web3forms.com/submit", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json"
-    },
-    body: json
-  })
-    .then(async (response) => {
-      let json = await response.json();
-      if (response.status == 200) {
-        result.innerHTML = json.message;
-        result.classList.remove("text-gray-500");
-        result.classList.add("text-green-500");
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const currentLang = htmlTag.getAttribute('data-lang');
+      if (currentLang === 'en') {
+        alert('Thank you for your message! I will get back to you soon.');
       } else {
-        console.log(response);
-        result.innerHTML = json.message;
-        result.classList.remove("text-gray-500");
-        result.classList.add("text-red-500");
+        alert('Köszönöm az üzenetet! Hamarosan felveszem Önnel a kapcsolatot.');
       }
-    })
-    .catch((error) => {
-      console.log(error);
-      result.innerHTML = "Something went wrong!";
-    })
-    .then(function () {
-      form.reset();
-      setTimeout(() => {
-        result.style.display = "none";
-      }, 5000);
+      contactForm.reset();
     });
-});
+  }
 
 });

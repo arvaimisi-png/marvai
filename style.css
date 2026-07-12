@@ -37,7 +37,7 @@ body {
 }
 
 .container {
-  max-width: 1080px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -155,6 +155,53 @@ html[data-lang="en"] .lang-hu {
   height: 3px;
   margin: 4px 0;
   background-color: var(--primary);
+}
+
+/* ==========================================
+   REFERENCIÁK ALMENÜ (TAB-OK)
+   ========================================== */
+.ref-subnav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.ref-tab-btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 2px solid var(--primary);
+  background-color: transparent;
+  color: var(--primary);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.ref-tab-btn:hover {
+  background-color: rgba(15, 76, 129, 0.1);
+}
+
+.ref-tab-btn.active {
+  background-color: var(--primary);
+  color: #ffffff;
+}
+
+/* Tab tartalmak elrejtése/megjelenítése */
+.ref-tab-content {
+  display: none;
+}
+
+.ref-tab-content.active {
+  display: block;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* ==========================================
@@ -442,13 +489,24 @@ html[data-lang="en"] .lang-hu {
   font-size: 1.15rem;
 }
 
-.skills-list { list-style: none; }
+.skills-list {
+  list-style: none;
+  list-style-type: disc;
+  columns: 2; /* Automatically splits the list into 2 columns */
+  column-gap: 20px;
+  padding-left: 20px; }
 .skills-list li {
   padding: 8px 0;
-  border-bottom: 1px solid var(--border-color);
-  color: var(--text-muted);
-  font-size: 0.9rem;
-}
+  font-size: 0.9rem;}
+
+.karier-list {
+  list-style: none;
+  list-style-type: disc;
+  column-gap: 20px;
+  padding-left: 20px; }
+.karier-list li {
+  padding: 8px 0;
+  font-size: 0.9rem;}
 
 .experience-highlight {
   background-color: rgba(129, 15, 76, 0.04);
