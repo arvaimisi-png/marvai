@@ -549,6 +549,7 @@ html[data-lang="en"] .lang-hu {
   border: 1px solid var(--border-color);
   border-radius: 6px;
   font-family: inherit;
+  resize: vertical;
 }
 
 .btn-block { width: 100%; }
